@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--Red);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.card > section {
+    flex: 1;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 40px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 25px;
+    opacity: 0.8;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box p {
+    margin: 0;
+}
+
+.box-blue {
+    background-color: var(--Blue);
+    padding: 20px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-control small {
+    color: var(--Red);
+    font-weight: 600;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    opacity: 0;
+    text-align: right;
+}
+
+input {
+    border-radius: 5px;
+    border: 1.3px solid var(--Grayish-Blue);
+    font-family:  'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px 25px;
+    display: block;
+    width: 100%;
+}
+
+.form-control.error input {
+    border-color: var(--Red);
+    color: var(--Red);
+}
+
+.form-control.error input::placeholder {
+    color: var(--Red);
+}
+
+input:focus-visible {
+outline: none;
+border: 1.3px solid var(--Blue);
+}
+
+.form-control img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+}
+
+.form-control.error img {
+    opacity: 1;
+}
+
+button {
+    background-color: var(--Green);
+    border: 1px solid var(--Green);
+    border-radius: 5px;
+    box-shadow: 0 2px var(--Green);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px 25px;
+    width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    font-family:  'Poppins', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 var(--Green);
+}
+
+button:hover {
+    background-color: hsl(154, 60%, 60%);
+    box-shadow: 0 4px var(--Green);
+}
+
+.form-control small {
+    opacity: 0;
+}
+
+.form-control.error small {
+    opacity: 1;
+}
+
+small {
+    display: block;
+    margin-top: 15px;
+    color: #bbb;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+small a {
+    color: var(--Red);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    p {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+}
